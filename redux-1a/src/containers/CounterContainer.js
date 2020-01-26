@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import Counter from "../components/Counter";
-import { incrementCount, decrementCount, evenIncrementCount, oddIncrementCount, asyncIncrementCount } from "../actions/counterActions";
+import { incrementCount, decrementCount } from "../actions/counterActions";
 
 class CounterContainer extends React.Component {
   increment = () => {
@@ -30,7 +30,7 @@ class CounterContainer extends React.Component {
 
   asyncIncrement = () => {
     const { dispatch } = this.props;
-    dispatch(asyncIncrementCount());
+    setTimeout(() => { dispatch(incrementCount()) }, 1000)
   };
 
   render() {

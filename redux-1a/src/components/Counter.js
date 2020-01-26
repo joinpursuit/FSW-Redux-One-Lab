@@ -8,7 +8,7 @@ const Counter = ({ value, onIncrement, onDecrement, evenIncrement, oddIncrement,
       <button onClick={onDecrement}>-</button>
       <button onClick={evenIncrement}>even</button>
       <button onClick={oddIncrement}>odd</button>
-      <button onClick={asyncIncrement}>'async'</button>
+      <button onClick={asyncIncrement}>{'async'}</button>
 
     </p>
   </div>

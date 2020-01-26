@@ -5,11 +5,12 @@ import { Provider } from "react-redux";
 
 import reducer from "./reducers/index";
 import CounterContainer from "./containers/CounterContainer";
+import './index.css'
 
 const store = createStore(reducer);
 
 const App = () => (
-  <div>
+  <div className='app'>
     <h2> My Counter App </h2>
     <CounterContainer />
   </div>

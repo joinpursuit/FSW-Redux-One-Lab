@@ -6,6 +6,10 @@ const Counter = ({ value, onIncrement, onDecrement }) => (
     <p>
       <button onClick={onIncrement}>+</button>
       <button onClick={onDecrement}>-</button>
+      { // <button onClick={onEvenIncrement}>even</button>
+        // <button onClick={onOddIncrement}>odd</button>
+        // <button onClick={asyncIncrement}>'async'</button>
+      }
     </p>
   </div>
 );

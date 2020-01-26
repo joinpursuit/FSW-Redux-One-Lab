@@ -1,2 +1,7 @@
 export const INCREMENT = "INCREMENT";
 export const DECREMENT = "DECREMENT";
+export const EVEN_INCREMENT = "EVEN_INCREMENT"
+export const ODD_INCREMENT = "ODD_INCREMENT"
+export const ASYNC_INCREMENT = "ASYNC_INCREMENT"
+
+

@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux'
-import { INCREMENT, DECREMENT, EVENINCREMENT } from '../Store/actionTypes';
+import { INCREMENT, DECREMENT, EVENINCREMENT, ODDINCREMENT, ASYNCINCREMENT } from '../Store/actionTypes';
 
 const Counter = (props) => {
 
@@ -16,12 +16,22 @@ const Counter = (props) => {
     props.evenIncrement()
   }
 
+  const handleOddIncrement = (e) => {
+    props.oddIncrement()
+  }
+
+  const handleAsyncIncrement = (e) => {
+    props.asyncIncrement()
+  }
+
   return (
     <div>
       <p>{props.counter}</p>
       <button onClick={handleIncrement}>+</button>
       <button onClick={handleDecrement}>-</button>
       <button onClick={handleEvenIncrement}>Even +</button>
+      <button onClick={handleOddIncrement}>Odd +</button>
+      <button onClick={handleAsyncIncrement}>Async +</button>
 
     </div>
   )
@@ -51,6 +61,18 @@ const mapDispatchToProps = (dispatch) => {
         type: EVENINCREMENT
       })
     },
+    oddIncrement: () => {
+      console.log('Odd increment called')
+      dispatch({
+        type: ODDINCREMENT
+      })
+    },
+    asyncIncrement: () => {
+      console.log('Async increment called')
+      setTimeout(() => {
+        dispatch({ type: ASYNCINCREMENT })
+      }, 1000)
+    }
   }
 }
 

@@ -1,5 +1,5 @@
 
-import { INCREMENT, DECREMENT, EVENINCREMENT } from "../actionTypes"
+import { INCREMENT, DECREMENT, EVENINCREMENT, ODDINCREMENT, ASYNCINCREMENT } from "../actionTypes"
 const initialState = {
   counter: 100
 }
@@ -26,6 +26,18 @@ const counterReducer = (state = initialState, action) => {
       } else {
         break;
       }
+
+    case ODDINCREMENT:
+      if (stateCopy.counter % 2 === 0) {
+        break;
+      } else {
+        stateCopy.counter++;
+        break;
+      }
+
+    case ASYNCINCREMENT:
+        stateCopy.counter++;
+      break;
 
     default:
       break;

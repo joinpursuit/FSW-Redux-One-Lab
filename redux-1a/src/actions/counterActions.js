@@ -7,15 +7,3 @@ export const incrementCount = () => {
 export const decrementCount = () => {
   return { type: DECREMENT };
 };
-
-export const evenIncrementCount = () => {
-  return { type: EVEN_INCREMENT };
-};
-
-export const oddIncrementCount = () => {
-  return { type: ODD_INCREMENT };
-};
-
-export const asyncIncrementCount = () => {
-  return { type: ASYNC_INCREMENT };
-};

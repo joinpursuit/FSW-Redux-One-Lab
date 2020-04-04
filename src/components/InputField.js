@@ -17,10 +17,10 @@ const InputField = () => {
     <form onSubmit={handleChange}>
       <input
         value={input}
-        placeholder="numbers"
-        type="numbers"
+        placeholder
+        type="number"
         onChange={(e) => {
-          setInput(e.target.value);
+          setInput(Number(e.target.value));
         }}
       ></input>
       <button type='submit'>#</button>

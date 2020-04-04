@@ -1,4 +1,4 @@
-import { INCREMENT, DECREMENT, RESET, SET_COUNT} from "../actions/actionTypes";
+import { INCREMENT, DECREMENT, RESET, SET_COUNT, EVEN, ODD} from "../actions/actionTypes";
 
 export default (state = 0, action) => {
     switch (action.type) {
@@ -10,6 +10,19 @@ export default (state = 0, action) => {
             return state = 0
         case SET_COUNT:
             return action.value
+        case EVEN: 
+            if (state % 2 === 0) {
+                return state += 1
+            } else {
+                return state
+            }
+        
+        // case ODD:
+        //     if (state % 2 === 1) {
+        //         return state += 1
+        //     } else {
+        //         return state
+        //     }
         default:
             return state
     }

@@ -1,7 +1,7 @@
 import React from "react";
 import Counter from "../components/Counter";
 import { useDispatch, useSelector } from "react-redux"
-import { incrementCount, decrementCount, resetCount, setCount} from "../actions/counterActions";
+import { incrementCount, decrementCount, resetCount, setCount, even, odd} from "../actions/counterActions";
 
 const CounterContainer = () => {
   let count = useSelector(state => state.count)
@@ -23,6 +23,13 @@ const CounterContainer = () => {
     dispatch(setCount(e.target.value))
   }
 
+  const evenCount = () => {
+    dispatch(even())
+  }
+
+  // const oddCount = () => {
+  //   dispatch(odd())
+  // }
 
   return (
     <Counter
@@ -31,6 +38,8 @@ const CounterContainer = () => {
       onDecrement={decrement}
       onReset={reset}
       setNewCount = {setNewCount}
+      evenCount = {evenCount}
+      // oddCOunt = {oddCount}
     />
   )
 }

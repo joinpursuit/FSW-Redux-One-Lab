@@ -1,4 +1,4 @@
-import { INCREMENT, DECREMENT, RESET, SET_COUNT } from "./actionTypes";
+import { INCREMENT, DECREMENT, RESET, SET_COUNT, EVEN, ODD } from "./actionTypes";
 
 export const incrementCount = () => {
   return { type: INCREMENT };
@@ -16,5 +16,17 @@ export const setCount = (value) => {
   return {
     type: SET_COUNT,
     value: value
+  }
+}
+
+export const even = () => {
+  return {
+    type: EVEN
+  }
+}
+
+export const odd = () => {
+  return {
+    type: ODD
   }
 }

@@ -1,7 +1,8 @@
 import React from "react";
 import Counter from "../components/Counter";
+import InputField from '../components/InputField'
 import { useSelector, useDispatch } from 'react-redux';
-import { incrementCount, decrementCount, zeroCount } from "../actions/counterActions";
+import { incrementCount, decrementCount, zeroCount, setCount } from "../actions/counterActions";
 
 const CounterContainer = () => {
   const count = useSelector(state => state.count);
@@ -19,6 +20,10 @@ const CounterContainer = () => {
     dispatch(zeroCount())
   }
 
+  const set = (value) =>{
+    dispatch(setCount(value))
+  }
+
   return (
     <React.Fragment>
     <Counter
@@ -27,6 +32,7 @@ const CounterContainer = () => {
       onDecrement={decrement}
       onZero={zero}
     />
+    <InputField value={count} onChange={set}/>
     </React.Fragment>
   )
 }

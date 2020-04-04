@@ -1,29 +1,38 @@
 import React from "react";
 import NumberForm from "./NumberForm";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  incrementCount,
+  decrementCount,
+  resetCount,
+} from "../actions/counterActions";
 
-const Counter = ({ value, onIncrement, onDecrement, resetValue }) => {
+const Counter = () => {
+  const count = useSelector((state) => state.count);
+  const dispatch = useDispatch();
+
   const evenIncrement = () => {
-    if (value % 2 === 0) {
-      onIncrement();
+    if (count % 2 === 0) {
+      dispatch(incrementCount());
     }
   };
 
   const oddIncrement = () => {
-    if (value % 2 === 1) {
-      onIncrement();
+    if (count % 2 === 1) {
+      dispatch(incrementCount());
     }
   };
 
   return (
     <div>
-      <p>value: {value}</p>
+      <p>value: {count}</p>
       <NumberForm />
       <p>
-        <button onClick={onIncrement}>+</button>
-        <button onClick={onDecrement}>-</button>
+        <button onClick={() => dispatch(incrementCount())}>+</button>
+        <button onClick={() => dispatch(decrementCount())}>-</button>
         <button onClick={evenIncrement}>Even</button>
         <button onClick={oddIncrement}>Odd</button>
-        <button onClick={resetValue}>Reset</button>
+        <button onClick={() => dispatch(resetCount())}>Reset</button>
       </p>
     </div>
   );

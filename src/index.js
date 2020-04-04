@@ -3,14 +3,14 @@ import ReactDOM from "react-dom";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
 import reducer from "./reducers/index";
-import CounterContainer from "./containers/CounterContainer";
+import Counter from "./components/Counter";
 
 let store = createStore(reducer);
 
 const App = () => (
   <div>
     <h2> My Counter App </h2>
-    <CounterContainer />
+    <Counter />
   </div>
 );
 

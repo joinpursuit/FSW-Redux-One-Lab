@@ -8,6 +8,6 @@ export const decrementCount = () => {
   return { type: DECREMENT };
 };
 
-export const zero = () =>{
+export const zeroCount = () =>{
   return { type: ZERO };
 }

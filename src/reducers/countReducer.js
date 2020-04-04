@@ -1,4 +1,4 @@
-import { INCREMENT, DECREMENT } from "../actions/actionTypes";
+import { INCREMENT, DECREMENT, CLEAR_COUNT } from "../actions/actionTypes";
 
 const countReducer = (state = 0, action) => {
   switch (action.type) {
@@ -6,6 +6,9 @@ const countReducer = (state = 0, action) => {
       return [...state, action.payload];
     case DECREMENT:
       return [...state, action.payload];
+
+    case CLEAR_COUNT:
+      return [];
     default:
       return state;
   }

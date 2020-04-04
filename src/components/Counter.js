@@ -1,12 +1,9 @@
 import React from "react";
 
-const Counter = ({ value, onIncrement, onDecrement, onReset }) => (
+const Counter = ({ value, onIncrement, onDecrement, onReset, setNewCount }) => (
   <div>
     <p>value: {value}</p>
-    <form>
-        <input type="number"/>
-        <button type="submit">Set yo value, dawg</button>
-    </form>
+    <input type="number" onChange={setNewCount}/>
     <p>
       <button onClick={onIncrement}>+</button>
       <button onClick={onDecrement}>-</button>

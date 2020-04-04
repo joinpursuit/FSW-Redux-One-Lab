@@ -1,11 +1,11 @@
 import { INCREMENT, DECREMENT, RESET_COUNTER, SET } from "./actionTypes";
 
-export const incrementCount = (count) => {
-  return { type: INCREMENT, payload: count};
+export const incrementCount = () => {
+  return { type: INCREMENT };
 };
 
-export const decrementCount = (count) => {
-  return { type: DECREMENT, payload: count };
+export const decrementCount = () => {
+  return { type: DECREMENT };
 };
 
 export const resetCount = () => {

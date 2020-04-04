@@ -20,8 +20,8 @@ const CounterContainer = () => {
     dispatch(zeroCount())
   }
 
-  const set = (value) =>{
-    dispatch(setCount(value))
+  const set = (e) =>{
+    dispatch(setCount(e.target.value))
   }
 
   return (
@@ -32,7 +32,7 @@ const CounterContainer = () => {
       onDecrement={decrement}
       onZero={zero}
     />
-    <InputField value={count} onChange={set}/>
+    <InputField onChange={set}/>
     </React.Fragment>
   )
 }

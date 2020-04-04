@@ -8,11 +8,10 @@ export const decrementCount = () => {
   return { type: DECREMENT };
 };
 
-export const zeroCount = () =>{
+export const zeroCount = () => {
   return { type: ZERO };
 };
 
-export const setCount = (value) =>{
-  return { type: SET, value}
-}
-
+export const setCount = (value) => {
+  return { type: SET, payload: value };
+};

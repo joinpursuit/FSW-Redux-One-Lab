@@ -4,8 +4,13 @@ import { incrementCount, decrementCount } from "../actions/counterActions";
 
 const CounterContainer = () => {
   let count = 0
-
-  const increment = () => {
+  
+  
+  const increment = (count) => {
+    console.log("State", count)
+    return {
+      increment: count + 1
+    }
   };
 
   const decrement = () => {

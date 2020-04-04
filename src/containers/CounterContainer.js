@@ -27,9 +27,9 @@ const CounterContainer = () => {
     dispatch(even())
   }
 
-  // const oddCount = () => {
-  //   dispatch(odd())
-  // }
+  const oddCount = () => {
+    dispatch(odd())
+  }
 
   return (
     <Counter
@@ -39,7 +39,7 @@ const CounterContainer = () => {
       onReset={reset}
       setNewCount = {setNewCount}
       evenCount = {evenCount}
-      // oddCOunt = {oddCount}
+      oddCOunt = {oddCount}
     />
   )
 }

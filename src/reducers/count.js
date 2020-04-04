@@ -17,12 +17,12 @@ export default (state = 0, action) => {
                 return state
             }
         
-        // case ODD:
-        //     if (state % 2 === 1) {
-        //         return state += 1
-        //     } else {
-        //         return state
-        //     }
+        case ODD:
+            if (state % 2 === 1) {
+                return state += 1
+            } else {
+                return state
+            }
         default:
             return state
     }

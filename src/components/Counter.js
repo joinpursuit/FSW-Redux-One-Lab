@@ -9,7 +9,7 @@ const Counter = ({ value, onIncrement, onDecrement, onReset, setNewCount, evenCo
       <button onClick={onDecrement}>-</button>
       <button onClick={onReset}>reset me, dawg</button>
       <button onClick={evenCount}>Only if even, dawg</button>
-      {/* <button onClick={oddCount}>Only if odd, dawg</button> */}
+      <button onClick={oddCount}>Only if odd, dawg</button>
     </p>
   </div>
 );

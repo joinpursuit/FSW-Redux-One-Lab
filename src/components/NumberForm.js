@@ -9,8 +9,8 @@ const NumberForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    debugger;
     dispatch(setValue(input));
+    setInput("");
   };
 
   return (

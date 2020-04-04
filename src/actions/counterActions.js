@@ -13,5 +13,5 @@ export const resetCount = () => {
 };
 
 export const setValue = (input) => {
-  return { type: SETVALUE, payload: input };
+  return { type: SETVALUE, payload: Number(input) };
 };

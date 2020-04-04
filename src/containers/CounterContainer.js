@@ -5,11 +5,9 @@ import { incrementCount, decrementCount } from "../actions/counterActions";
 const CounterContainer = () => {
   let count = 0
 
-  const increment = () => {
-  };
+  const increment = x => y => x + y; 
 
-  const decrement = () => {
-  };
+  const decrement = x => y => x - y; 
 
   return (
     <Counter

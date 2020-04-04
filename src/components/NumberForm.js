@@ -1,10 +1,16 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { setValue } from "../actions/counterActions";
 
 const NumberForm = () => {
+  //   const count = useSelector((state) => state);
+  const dispatch = useDispatch();
   const [input, setInput] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    debugger;
+    dispatch(setValue(input));
   };
 
   return (

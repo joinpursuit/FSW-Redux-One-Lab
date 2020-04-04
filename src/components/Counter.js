@@ -23,6 +23,12 @@ const Counter = () => {
     }
   };
 
+  const delayIncrement = () => {
+    setTimeout(() => {
+      dispatch(incrementCount());
+    }, 1000);
+  };
+
   return (
     <div>
       <p>value: {count}</p>
@@ -32,6 +38,7 @@ const Counter = () => {
         <button onClick={() => dispatch(decrementCount())}>-</button>
         <button onClick={evenIncrement}>Even</button>
         <button onClick={oddIncrement}>Odd</button>
+        <button onClick={delayIncrement}>Delay Increment</button>
         <button onClick={() => dispatch(resetCount())}>Reset</button>
       </p>
     </div>

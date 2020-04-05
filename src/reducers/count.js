@@ -1,4 +1,4 @@
-import { INCREMENT, DECREMENT } from "../actions/actionTypes";
+import { INCREMENT, DECREMENT, RESET } from "../actions/actionTypes";
 
 const CountReducer = (state = 0, action) => {
   switch (action.type) {
@@ -6,6 +6,8 @@ const CountReducer = (state = 0, action) => {
       return state + 1;
     case DECREMENT:
       return state - 1;
+    case RESET:
+      return (state = 0);
     default:
       return state;
   }

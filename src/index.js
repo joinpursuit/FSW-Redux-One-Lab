@@ -4,8 +4,8 @@ import { createStore } from "redux";
 import { Provider } from "react-redux";
 
 import CounterContainer from "./containers/CounterContainer";
-
-let store = createStore(() => {})
+import rootReducer from "./reducers/index";
+let store = createStore(rootReducer);
 
 const App = () => (
   <div>

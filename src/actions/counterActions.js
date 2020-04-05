@@ -1,6 +1,7 @@
 import { INCREMENT, DECREMENT } from "./actionTypes";
 
 export const incrementCount = () => {
+  debugger
   return { type: INCREMENT };
 };
 

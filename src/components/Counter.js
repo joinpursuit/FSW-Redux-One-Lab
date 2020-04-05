@@ -6,11 +6,12 @@ import {
   decrementCount,
   clearCount
 } from "../actions/counterActions";
-
+import CounterContainer from "../containers/CounterContainer";
 
 const Counter = ({ value, onIncrement, onDecrement }) => {
 const [count, setCount] = useState(0);
 const dispatch = useDispatch();
+
 
 
 

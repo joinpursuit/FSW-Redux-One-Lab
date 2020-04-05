@@ -1,11 +1,11 @@
 import { INCREMENT, DECREMENT, CLEAR_COUNT } from "./actionTypes";
 
-export const incrementCount = count => {
-  return { type: INCREMENT, payload: count };
+export const incrementCount = () => {
+  return { type: INCREMENT };
 };
 
 export const decrementCount = () => {
-  return { type: DECREMENT, payload: count };
+  return { type: DECREMENT };
 };
 
 export const clearCount = () => {

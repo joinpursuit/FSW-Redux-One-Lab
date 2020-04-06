@@ -3,9 +3,7 @@ import Counter from "../components/Counter";
 import { incrementCount, decrementCount } from "../actions/counterActions";
 import {useSelector, useDispatch} from 'react-redux'
 const CounterContainer = () => {
-  let count = useSelector((state)=>{
-    return state.count;
-  })
+  let count = useSelector(state=>state)
   const dispatch =useDispatch()
   const increment = ()=>{
     dispatch(incrementCount())
@@ -18,11 +16,13 @@ const CounterContainer = () => {
   }
 
   return (
+    <>
     <Counter
       value={count}
       onIncrement={increment}
       onDecrement={decrement}
     />
+    </>
   )
 }
 

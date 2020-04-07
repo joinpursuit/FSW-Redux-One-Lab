@@ -3,9 +3,10 @@ import ReactDOM from "react-dom";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
 
+import reducer from "./reducers/index";
 import CounterContainer from "./containers/CounterContainer";
 
-let store = createStore(() => {})
+let store = createStore(reducer)
 
 const App = () => (
   <div>
